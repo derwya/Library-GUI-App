@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="../styles/style.css"/>
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="upperContainer">
+            <div class="titlesContainer">
+                <p id="title"><strong>Library</strong></p>
+            </div>
+            <div class="buttonsContainer">
+                <button class="buttons" id="button1">Genre</button>
+                <button class="buttons" id="button2">Author</button>
+                <button class="buttons" id="button3">Book</button>
+            </div>
+        </div>
+        <div class="centerContainer">
+
+            <div class="wrapper" id="wrapper1">
+                <div class="innerContainer">
+                    <form action="" id="newGenreForm">
+                        <p class="centerTitle"><strong>Genre`s name: </strong></p>
+                        <label>
+                        <input class="text" name="name" type="text" id="text1" size="32">
+                    </label>
+                    <br>
+                    <button type="button" class="reset" onclick="$('#text1').val('')">Reset</button>
+                    <p class="centerTitle"><strong>Description: </strong></p>
+                    <label>
+                        <input class="text" name="description" type="text" id="text2" size="32">
+                    </label>
+                    <br>
+                    <button type="button" class="reset" onclick="$('#text2').val('')">Reset</button>
+                    <br>
+                    <button type="button" class="addOrRemoveButton" id="addGenre">Add</button>
+                    </form>
+                </div>
+                <div class="innerContainer" style="margin: 0 auto auto 30px;">
+                    <form action="" id="removeGenreForm">
+                        <p class="centerTitle"><strong>Choose genre to remove: </strong></p>
+                        <label>
+                        <select class="genre" title="Genre">
+                            <option value="none" hidden="">Choose genre</option>
+                        </select>
+                    </label>
+                    <br>
+                    <button type="button" class="addOrRemoveButton" id="removeGenre">Remove</button>
+                    </form>
+                    <p class="centerTitle"><strong>Info about genre: </strong></p>
+                    <label>
+                        <select class="genre" title="Genre" id="infoAboutGenre">
+                            <option value="none" hidden="">Choose genre</option>
+                        </select>
+                    </label>
+                    <br>
+                    <label>
+                        <input class="text" type="text" size="32" id="genresName" placeholder="Genre" readonly="readonly">
+                        <br>
+                        <input class="text" type="text" size="32" id="genresDescription" placeholder="Description" readonly="readonly">
+                    </label>
+                </div>
+            </div>
+
+            <div class="wrapper" id="wrapper2" style="display: none">
+                <div class="innerContainer">
+                    <form action="" id="newAuthorForm">
+                        <p class="centerTitle"><strong>Author`s name: </strong></p>
+                    <label>
+                        <input class="text" name="name" type="text" id="text3" size="32">
+                    </label>
+                        <br>
+                        <button type="button" class="reset" onclick="$('text3').val('')">Reset</button>
+                    <p class="centerTitle"><strong>Author`s surname: </strong></p>
+                    <label>
+                        <input class="text" name="surname" type="text" id="text4" size="32">
+                    </label>
+                        <br>
+                        <button type="button" class="reset" onclick="$('text4').val('')">Reset</button>
+                    <br>
+                        <button class="addOrRemoveButton" type="button" id="addAuthor">Add</button>
+                    </form>
+                </div>
+                <div class="innerContainer" style="margin: 0 auto auto 30px;">
+                    <form action="" id="removeAuthorForm">
+                        <p class="centerTitle"><strong>Choose author to remove: </strong></p>
+                    <label>
+                        <select class="author" title="Author">
+                            <option value="none" hidden="">Choose author</option>
+                        </select>
+                    </label>
+                    <br>
+                        <button class="addOrRemoveButton" type="button" id="removeAuthor">Remove</button>
+                    </form>
+                    <p class="centerTitle"><strong>Info about author: </strong></p>
+                    <label>
+                        <select class="author" id="infoAboutAuthor" title="Author">
+                            <option value="none" hidden="">Choose author</option>
+                        </select>
+                    </label>
+                    <br>
+                    <label>
+                        <input class="text" type="text" size="32" placeholder="Name Surname" id="authorsNameSurname" readonly="readonly">
+                        <br>
+                        <select class="authorBooks" id="authorsBooks" title="Books">
+                            <option value="none" hidden="">Author`s books</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="wrapper" id="wrapper3" style="display: none">
+                <div class="innerContainer">
+                    <form action="" id="newBookForm">
+                        <p class="centerTitle"><strong>Book`s title: </strong></p>
+                    <label>
+                        <input class="text" name="title" type="text" id="text5" size="32">
+                    </label>
+                        <br>
+                        <button type="button" class="reset" onclick="$('text5').val('')">Reset</button>
+                    <p class="centerTitle"><strong>Description: </strong></p>
+                    <label>
+                        <input class="text" name="description" type="text" id="text6" size="32">
+                    </label>
+                        <br>
+                        <button type="button" class="reset" onclick="$('text6').val('')">Reset</button>
+                    <br>
+                    <p class="centerTitle"><strong>Year: </strong></p>
+                    <label>
+                        <input class="text" name="year" type="number" id="text7" size="32">
+                    </label>
+                        <br>
+                        <button type="reset" class="reset" onclick="$('text7').val('')">Reset</button>
+                    <br>
+                    <p class="centerTitle"><strong>Genre: </strong></p>
+                    <label>
+                        <select class="genre" title="Genre">
+                            <option value="none" hidden="">Choose genre</option>
+                        </select>
+                    </label>
+                    <br>
+                    <p class="centerTitle"><strong>Author: </strong></p>
+                    <label>
+                        <select class="author" title="Genre" required>
+                            <option value="none" hidden="">Choose author</option>
+                        </select>
+                    </label>
+                    <br>
+                    <button type="button" class="addOrRemoveButton" id="addBook">Add</button>
+                    </form>
+                </div>
+                <div class="innerContainer" style="margin: 0 auto auto 30px;">
+                    <form action="" id="removeBookForm">
+                        <p class="centerTitle"><strong>Choose book to remove: </strong></p>
+                    <label>
+                        <select class="book" title="Book">
+                            <option value="none" hidden="">Choose book</option>
+                        </select>
+                    </label>
+                    <br>
+                        <button type="button" class="addOrRemoveButton" id="removeBook">Remove</button>
+                    </form>
+                    <p class="centerTitle"><strong>Info about book: </strong></p>
+                    <label>
+                        <select class="book" title="Book" id="infoAboutBook">
+                            <option value="none" hidden="">Choose book</option>
+                        </select>
+                    </label>
+                    <br>
+                    <label>
+                        <input class="text" type="text" size="32" id="booksTitle" placeholder="Title" readonly="readonly">
+                        <br>
+                        <input class="text" type="text" size="32" id="booksDescription" placeholder="Description" readonly="readonly">
+                        <br>
+                        <input class="text" type="text" size="32" id="booksYear" placeholder="Year" readonly="readonly">
+                        <br>
+                        <input class="text" type="text" size="32" id="booksGenre" placeholder="Genre" readonly="readonly">
+                        <br>
+                        <input class="text" type="text" size="32" id="booksAuthor" placeholder="Author" readonly="readonly">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script rel="script" type="text/javascript" src="../scripts/scripts.js"></script>
+</html>

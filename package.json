@@ -1,0 +1,30 @@
+{
+  "name": "library",
+  "version": "0.0.1",
+  "description": "homework",
+  "main": "./src/main/java/com/alex/front-app/scripts/main.js",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0",
+    "portfinder": "^1.0.25",
+    "winston": "^3.2.1",
+    "ws": "^7.2.1"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.47",
+    "electron": "^7.1.10",
+    "socket.io": "^2.3.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Derwya",
+  "license": "ISC",
+  "optionalDependencies": {
+    "bufferutil": "^4.0.1",
+    "utf-8-validate": "^5.0.2"
+  }
+}
