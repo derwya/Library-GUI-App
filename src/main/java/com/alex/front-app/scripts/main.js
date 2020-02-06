@@ -19,7 +19,7 @@ function createWindow() {
         maxHeight: 2160,
         fullscreenable: true,
         show: false,
-         icon: path.join(__dirname, "..", "images", "icon128.png"),
+        icon: path.join(__dirname, "..", "images", "icon128.png"),
         autoHideMenuBar: true,
         webPreferences: {
             nodeIntegration: true
@@ -27,7 +27,7 @@ function createWindow() {
     });
 
     //window.setMenu(null);
-     window.loadFile(path.join(__dirname, "..", "pages", "index.html"))
+    window.loadFile(path.join(__dirname, "..", "pages", "index.html"))
         .catch(logger.error);
 
     logger.info("Window was created...");
@@ -48,7 +48,7 @@ function createWindow() {
 
 
 app.once("ready", async () => {
-    child_process = await startServer();
+    //child_process = await startServer();
     await msleep(5000);
     createWindow();
 });
@@ -66,7 +66,7 @@ app.whenReady().then(() => {
 
 app.once('window-all-closed', () => {
     if (process.platform !== 'darwin') {
-        child_process.kill();
+        //child_process.kill();
         app.quit();
     }
 });
