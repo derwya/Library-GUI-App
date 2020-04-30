@@ -6,7 +6,7 @@
   "dependencies": {
     "chalk": "^3.0.0",
     "express": "^4.17.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "moment": "^2.24.0",
     "portfinder": "^1.0.25",
     "winston": "^3.2.1",
