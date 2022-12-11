@@ -5,7 +5,7 @@
   "main": "./src/main/java/com/alex/front-app/scripts/main.js",
   "dependencies": {
     "chalk": "^3.0.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
     "portfinder": "^1.0.25",
